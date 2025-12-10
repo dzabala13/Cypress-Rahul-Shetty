@@ -10,5 +10,12 @@ describe('This is my first test suit', () => {
     // here we are using a similar sintaxys that is from jquery to select just the elements that are visible
     cy.get('.product-image:visible').should('have.length',4)
 
+    cy.get('.products').find('.product').eq(2).contains('ADD TO CART').click()
+    // you use get() to get a DOM element, remember that cypress support the CSS selectors
+    // when you are using find() is when you want to select a specific child of one node into the DOM
+    // the function eq() is usefull when you want to select one of the multiple result that you can get.
+    // contains functions help you to find a element using the text of the element
+
+
   })
 })
